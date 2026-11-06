@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # tiJian
 
 This template should help get you started developing with Vue 3 in Vite.
@@ -36,3 +37,6 @@ npm run dev
 ```sh
 npm run build
 ```
+=======
+# tijian-dev
+>>>>>>> dbfe5062401b6c18bf4d47426b04da1643773c58
