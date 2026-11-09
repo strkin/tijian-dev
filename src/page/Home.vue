@@ -61,7 +61,7 @@
 <el-row :gutter="10" style="padding: 10px;width: 100%; box-sizing: border-box;">
             <el-col :xs="6" :sm="8" :md="8" :lg="8" :xl="8"
            v-for="(item, index) in navs" :key="index"
-           @click="router.push(nav.path)">
+           @click="router.push(item.path)">
             <div class="nav-item" style="height: 10vh;">
             <img :src="item.img">
             {{ item.title }}
@@ -120,8 +120,8 @@ const doctors=[
     {title: '吴晓梦',subtitle: '主任医师', img: 'src/img/doctor8.jpg', path: ''}
 ]
 const navs=[
-  {title:'云医院',img:'',path:''},
-  {title:'商城',img:'',path:''},
+  {title:'云医院',img:'',path:'/home'},
+  {title:'商城',img:'',path:'/shop'},
   {title:'发现',img:'',path:''},
   {title:'我',img:'',path:''}
 ]
