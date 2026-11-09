@@ -14,5 +14,9 @@ export default [
     {
         path:"/reg",
         component:()=>import('@/page/Reg.vue')
-    }
+    },
+    {
+    path: "/shop",
+    component: () => import('@/page/Shop.vue')
+}
 ]
