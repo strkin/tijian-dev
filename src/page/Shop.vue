@@ -610,7 +610,7 @@ const navs = [
   {
     title: '发现',
     img: '',
-    path: ''
+    path: '/discover'
   },
 
   {

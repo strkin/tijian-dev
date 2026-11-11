@@ -9,6 +9,10 @@ import 'element-plus/dist/index.css'
 const router = createRouter({
   history: createWebHistory(),
   routes:routers,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) return savedPosition
+    return { top: 0 }
+  },
 })
 const app=createApp(App)
 app.use(router)

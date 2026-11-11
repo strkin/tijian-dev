@@ -9,6 +9,19 @@ lerna-debug.log*
 
 node_modules
 .DS_Store
+
+# 本地环境变量与 npm 缓存（沙箱内缓存目录必须放在项目里）
+.env
+.npm-cache
+
+# 本地截图、浏览器调试产物与临时脚本
+.screenshots/
+.chrome-profile*/
+.tmp-*
+
+# 用户上传的图片，保留目录本身
+server/uploads/*
+!server/uploads/.gitkeep
 dist
 dist-ssr
 coverage

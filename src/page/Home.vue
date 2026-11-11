@@ -20,7 +20,7 @@
       <el-row :gutter="10" style="padding: 10px;width: 100%; box-sizing: border-box;">
         <el-col :xs="12" :sm="8" :md="8" :lg="8" :xl="8"
            v-for="(item, index) in menus" :key="index"
-           @click="router.push(item.path)">
+           @click="item.path && router.push(item.path)">
           <div class="menu-item">
             <img :src="item.img">
             {{ item.title }}
@@ -45,7 +45,7 @@
       <el-row :gutter="10" style="padding: 10px;width: 100%; box-sizing: border-box;">
         <el-col :xs="6" :sm="8" :md="8" :lg="8" :xl="8"
           v-for="(item, index) in doctors" :key="index"
-          @click="router.push(doctor.path)">
+          @click="item.path && router.push(item.path)">
           <div class="doctor-item">
             <img :src="item.img">
             {{ item.title }}
@@ -61,7 +61,7 @@
 <el-row :gutter="10" style="padding: 10px;width: 100%; box-sizing: border-box;">
             <el-col :xs="6" :sm="8" :md="8" :lg="8" :xl="8"
            v-for="(item, index) in navs" :key="index"
-           @click="router.push(item.path)">
+           @click="item.path && router.push(item.path)">
             <div class="nav-item" style="height: 10vh;">
             <img :src="item.img">
             {{ item.title }}
@@ -122,7 +122,7 @@ const doctors=[
 const navs=[
   {title:'云医院',img:'',path:'/home'},
   {title:'商城',img:'',path:'/shop'},
-  {title:'发现',img:'',path:''},
+  {title:'发现',img:'',path:'/discover'},
   {title:'我',img:'',path:''}
 ]
 </script>
