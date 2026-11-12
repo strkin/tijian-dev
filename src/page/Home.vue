@@ -10,7 +10,7 @@
         :disabled="item.disabled"
       />
     </el-select>
-    <el-button type="primary" :icon="Message" @click="goTo('/Message')"/>
+    <el-button type="primary" :icon="Message" @click="router.push('/Message')"/>
   </div>
 
   <div class="content">
@@ -23,7 +23,7 @@
       <el-row :gutter="10" style="padding: 10px;width: 100%; box-sizing: border-box;">
         <el-col :xs="12" :sm="8" :md="8" :lg="8" :xl="8"
            v-for="(item, index) in menuList" :key="index"
-           @click="goTo(item.path)">
+           @click="router.push(item.path)">
           <div class="menu-item">
             <img :src="item.img">
             {{ item.title }}
@@ -39,7 +39,7 @@
       </div>
       <div class="reportContent" style="margin-left: 4vw;margin-bottom: 4vw;">
          随时随地查看体检报告
-        <el-button style="float: right;background-color: #127A90;color: #f9f9f9;" @click="goTo('/HealthFile')">立即查看</el-button>
+        <el-button style="float: right;background-color: #127A90;color: #f9f9f9;" @click="router.push('/HealthFile')">立即查看</el-button>
       </div>
     </div>
 
@@ -51,7 +51,7 @@
       <el-row :gutter="10" style="padding: 10px;width: 100%; box-sizing: border-box;">
         <el-col :xs="6" :sm="8" :md="8" :lg="8" :xl="8"
           v-for="(item, index) in doctorList" :key="index">
-          <div class="doctor-item" @click="goDoctor(index)">
+          <div class="doctor-item" @click="router.push('/DoctorDetail/' + index)">
             <img :src="item.img">
             <p class="doctor-name">{{ item.title }}</p>
             <p class="doctor-title">{{ item.subtitle }}</p>
@@ -70,7 +70,7 @@
         <div class="scrollbar-flex-content">
           <img v-for="(item, index) in assessList" :key="index"
             :src="item.img" class="assess-img"
-            @click="goTo(item.path)">
+            @click="router.push(item.path)">
         </div>
       </el-scrollbar>
     </div>
@@ -84,7 +84,7 @@
       <el-row :gutter="10" style="padding: 10px;width: 100%; box-sizing: border-box;">
         <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8"
            v-for="(item, index) in consultList" :key="index"
-           @click="goTo(item.path)">
+           @click="router.push(item.path)">
           <div class="consulation-item">
             <img :src="item.img">
             <div class="text-box">
@@ -172,16 +172,6 @@ let consultList = [
   { title: '体检发现甲状腺结节，怎么办？', subtitle: '日常需注意什么？', img: 'src/img/info2.png', path: '' },
 ]
 
-// 页面跳转
-function goTo(path) {
-  router.push(path)
-}
-
-// 点医生进详情
-function goDoctor(index) {
-  console.log('点了第' + index + '个医生')
-  router.push('/DoctorDetail/' + index)
-}
 
 onMounted(function () {
   console.log('首页加载完了')

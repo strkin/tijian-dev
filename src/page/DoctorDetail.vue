@@ -19,8 +19,8 @@
     <p>周一至周五 上午 8:00-11:30</p>
   </div>
   <div class="btns">
-    <el-button type="primary" @click="goAppointment">预约挂号</el-button>
-    <el-button plain @click="goConsult">在线问诊</el-button>
+    <el-button type="primary" @click="router.push('/Appointment')">预约挂号</el-button>
+    <el-button plain @click="router.push('/WebConsulation')">在线问诊</el-button>
   </div>
   </template>
 </div>
@@ -60,15 +60,7 @@ let doctor = computed(function () {
   return doctorList[id]
 })
 
-// 预约挂号
-function goAppointment() {
-  router.push('/Appointment')
-}
 
-// 在线问诊
-function goConsult() {
-  router.push('/WebConsulation')
-}
 </script>
 
 <style scoped>

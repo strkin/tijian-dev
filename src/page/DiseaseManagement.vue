@@ -4,7 +4,7 @@
     <p style="margin-left:0vw;font-size:5vw;">慢病管理</p>
 </div>
 <div class="card">
-    <el-button @click="goMyFile">我的档案</el-button>
+    <el-button @click="router.push('/MyFile')">我的档案</el-button>
     <div style="display: flex;">
 
         <el-table :data="tableData" stripe style="width: 100%">
@@ -79,9 +79,5 @@ function editCell(row, field, event) {
   console.log('改好了：', row)
 }
 
-// 跳转到我的档案
-function goMyFile() {
-  router.push('/MyFile')
-}
 
 </script>

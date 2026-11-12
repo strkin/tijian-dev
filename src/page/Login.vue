@@ -16,7 +16,7 @@
             <RouterLink to="/Reg" style="text-decoration: none;">注册</RouterLink>
             <RouterLink to="" style="text-decoration: none;">忘记密码？</RouterLink>
         </div>
-        <el-button style="width: 100%;color: #FFF;background-color: #70B0BC;" @click="goLogin">登录</el-button>
+        <el-button style="width: 100%;color: #FFF;background-color: #70B0BC;" @click="router.push('/home')">登录</el-button>
 
     </div>
 
@@ -36,13 +36,7 @@ let passwordIn = ref('')     // 密码
 
 let router = useRouter()
 
-// 点登录按钮
-function goLogin() {
-    console.log('手机号是：' + countIn.value)
-    console.log('密码就不打印了')
-    // 先不做验证，直接进首页
-    router.push('/home')
-}
+// 点登录按钮直接进首页
 
 // 以后可能要加验证码
 // function getCode() {

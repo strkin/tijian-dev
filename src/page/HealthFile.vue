@@ -10,7 +10,7 @@
     <img class="banner" src="@/img/report.png">
 
     <ul class="file-list">
-      <li class="file-item" v-for="(f, i) in files" :key="i" @click="goReport">
+      <li class="file-item" v-for="(f, i) in files" :key="i" @click="router.push('/TijianReport')">
         <div class="left">
           <el-icon class="file-icon"><Document /></el-icon>
           <div class="text">
@@ -18,7 +18,7 @@
             <p class="file-subtitle">{{ f.subtitle }}</p>
           </div>
         </div>
-        <el-button :icon="ArrowRight" @click="goReport" style="border: none;"></el-button>
+        <el-button :icon="ArrowRight" @click="router.push('/TijianReport')" style="border: none;"></el-button>
       </li>
     </ul>
   </div>
@@ -38,11 +38,6 @@ let files = ref([
   { title: '2019年10月11日 体检报告', subtitle: '沈阳熙康云医院' }
 ])
 
-// 点进去看报告
-function goReport() {
-  console.log('看报告')
-  router.push('/TijianReport')
-}
 
 // 以后要加删除功能
 // function delReport() {

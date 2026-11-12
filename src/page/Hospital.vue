@@ -10,7 +10,7 @@
       <div class="card-title">
         <span class="bar"></span>
         <p>{{ h.name }}</p>
-        <el-button :icon="ArrowRight" @click="goTaocan" style="border: none;"></el-button>
+        <el-button :icon="ArrowRight" @click="router.push('/Tijiantaocan')" style="border: none;"></el-button>
       </div>
       <div class="card-body">
         <img :src="h.img">
@@ -61,11 +61,6 @@ let hospitals = [
   }
 ]
 
-// 点箭头进套餐页
-function goTaocan() {
-  console.log('选择医院')
-  router.push('/Tijiantaocan')
-}
 </script>
 
 <style scoped>

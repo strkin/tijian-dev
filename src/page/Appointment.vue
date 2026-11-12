@@ -8,8 +8,8 @@
         <img src="@/img/yuyue.png">
     </div>
     <div style="display: flex;margin-top: 10vw;padding: 0 3.6vw;justify-content: space-between;">
-        <img src="@/img/benrenyuyue.png" @click="goHospital" style="width: 44vw;border-radius: 1.6vw;display: block;cursor: pointer;">
-        <img src="@/img/jiashuyuyue.png" @click="goFamily" style="width: 44vw;border-radius: 1.6vw;display: block;cursor: pointer;">
+        <img src="@/img/benrenyuyue.png" @click="router.push('/Hospital')" style="width: 44vw;border-radius: 1.6vw;display: block;cursor: pointer;">
+        <img src="@/img/jiashuyuyue.png" @click="router.push('/FamilyMember')" style="width: 44vw;border-radius: 1.6vw;display: block;cursor: pointer;">
     </div>
 </div>
 </template>
@@ -22,15 +22,7 @@ import yuyue from "@/img/yuyue.png"
 
 let router = useRouter()
 
-// 本人预约，选医院
-function goHospital() {
-    router.push('/Hospital')
-}
 
-// 家属预约，先选家属
-function goFamily() {
-    router.push('/FamilyMember')
-}
 </script>
 <style scoped>
 .page {
