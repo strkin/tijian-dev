@@ -23,7 +23,7 @@ let router = useRouter()
 // 底部的4个导航
 let navs = [
   { title: '云医院', icon: House, path: '/home' },
-  { title: '商城', icon: ShoppingCart, path: '' },
+  { title: '商城', icon: ShoppingCart, path: '/shop' },
   { title: '发现', icon: Search, path: '' },
   { title: '我', icon: User, path: '' }
 ]
