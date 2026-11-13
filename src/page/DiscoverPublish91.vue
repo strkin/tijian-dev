@@ -109,7 +109,8 @@
         />
       </section>
 
-      <div class="text-center">
+      <!-- 谁动我bootstrap了？现在不能用了 -->
+      <div class="text-center" style="text-align: center;">
         <p class="notice">发布内容请遵循★中华人民共和国★相关法律法规</p>
         <p class="notice">违者直接枪毙</p>
       </div>

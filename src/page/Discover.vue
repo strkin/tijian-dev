@@ -104,8 +104,6 @@
         <span v-else-if="posts.length" class="end-line" style="user-select: none;">— 你已抵达最深处 —</span>
       </div>
     </template>
-
-    <TabBar active="discover" />
   </div>
 </template>
 
@@ -114,7 +112,6 @@ import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
 import { Search, Plus, StarFilled, WarningFilled, Reading } from '@element-plus/icons-vue'
-import TabBar from '@/components/TabBar.vue'
 import { fetchMeta, fetchPosts } from '@/api/discover'
 import { formatCount, hashString } from '@/utils/format'
 

@@ -29,6 +29,13 @@ let routes = [
     { path: "/MentalAge", component: function () { return import('@/page/MentalAge.vue') } },
     { path: "/TcmConstitution", component: function () { return import('@/page/TcmConstitution.vue') } },
     { path: "/DiabetesRisk", component: function () { return import('@/page/DiabetesRisk.vue') } },
+    // [发现]页面路由
+    { path: "/discover", component: function () { return import('@/page/Discover.vue') } },
+    { path: "/discover91", component: function () { return import('@/page/Discover91.vue') } },
+    { path: "/discover/publish", component: function () { return import('@/page/DiscoverPublish.vue') } },
+    { path: "/discover91/publish", component: function () { return import('@/page/DiscoverPublish91.vue') } },
+    { path: "/discover/:id", component: function () { return import('@/page/DiscoverDetail.vue') } },
+    { path: "/discover91/:id", component: function () { return import('@/page/DiscoverDetail91.vue') } }
 ]
 
 export default routes

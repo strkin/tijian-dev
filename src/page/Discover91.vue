@@ -139,8 +139,6 @@
         
       </div>
     </template>
-
-    <TabBar active="discover" />
   </div>
 </template>
 
@@ -149,7 +147,6 @@ import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
 import { Search, Plus, StarFilled, WarningFilled } from '@element-plus/icons-vue'
-import TabBar from '@/components/TabBar.vue'
 import { fetchMeta, fetchPosts } from '@/api/discover'
 import { formatCount } from '@/utils/format'
 
@@ -270,7 +267,7 @@ function selectCategory(item) {
 }
 
 function goPublish() {
-  router.push('/discover/publish91')
+  router.push('/discover91/publish')
 }
 
 function openPost(id) {
