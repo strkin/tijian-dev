@@ -1,6 +1,6 @@
 <template>
     <div style="margin: auto;margin-bottom: 3vh;">
-        <el-button type="primary" :icon="ArrowLeftBold" @click="router.push('/login')" style="margin-right: 30vw;"/>
+        <el-button type="primary" :icon="ArrowLeftBold" @click="router.back()" style="margin-right: 30vw;"/>
         注册
     </div>
 <p style="font-size: 7.4vw;">欢迎注册</p>
@@ -38,9 +38,10 @@ import { reactive } from 'vue'
 import { RouterLink, useRouter } from 'vue-router'
 import { ArrowLeftBold } from '@element-plus/icons-vue'
 
-const router = useRouter()
+let router = useRouter()
 
-const form = reactive({
+// 注册要填的东西
+let form = reactive({
     count: '',
     name: '',
     birthday: '',
@@ -50,11 +51,12 @@ const form = reactive({
     confirmPassword: ''
 })
 
+// 点完成按钮
 function handleRegister() {
-    console.log(form)
-    // 这里可以加：两次密码是否一致的校验
-    // if (form.password !== form.confirmPassword) {
-    //     alert('两次密码不一致')
+    console.log('用户填的信息：', form)
+    // 本来想判断两次密码一不一样的，先不写了
+    // if (form.password != form.confirmPassword) {
+    //     alert('两次密码输入的不一样')
     //     return
     // }
     router.push('/login')
