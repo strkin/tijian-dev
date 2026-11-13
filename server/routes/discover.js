@@ -8,6 +8,12 @@ const MAX_IMAGES = 9
 const MAX_TITLE = 80
 const MAX_CONTENT = 5000
 
+/**
+ * 内置封面清单：文件放在 public/covers/ 下，路径以 /covers/ 开头。
+ * 新增封面时把 svg 丢进 public/covers/ 并在下面登记序号即可。
+ */
+const COVER_FILES = [1, 2, 3, 4, 5, 6, 7].map((n) => `/covers/cover-${n}.svg`)
+
 function fail(status, message) {
   const err = new Error(message)
   err.status = status
@@ -28,7 +34,7 @@ function pickCover(value) {
     const cover = value.trim()
     if (cover.startsWith('/covers/') || cover.startsWith('/uploads/')) return cover
   }
-  return `/covers/cover-${1 + Math.floor(Math.random() * 6)}.svg`
+  return COVER_FILES[Math.floor(Math.random() * COVER_FILES.length)]
 }
 
 function pickImages(value) {
@@ -242,7 +248,7 @@ router.post(
 router.get('/meta', (req, res) => {
   res.json({
     categories: CATEGORIES,
-    covers: [1, 2, 3, 4, 5, 6].map((n) => `/covers/cover-${n}.svg`),
+    covers: COVER_FILES,
     limits: { title: MAX_TITLE, content: MAX_CONTENT, images: MAX_IMAGES },
   })
 })

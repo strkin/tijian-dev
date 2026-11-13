@@ -10,7 +10,7 @@
 
     <div class="form">
       <section class="block">
-        <h2 class="block-title">选择分类</h2>
+        <h2 class="block-title">选择话题分类</h2>
         <div class="chips">
           <button
             v-for="item in categories"
@@ -31,7 +31,7 @@
           v-model="form.title"
           :maxlength="limits.title"
           show-word-limit
-          placeholder="一句话说清楚你想分享的内容"
+          placeholder="试着写点攒劲的标题把用户骗进来"
           class="title-input"
         />
       </section>
@@ -45,7 +45,7 @@
           :maxlength="limits.content"
           show-word-limit
           resize="none"
-          placeholder="写下你的经验、知识或疑问，空行可以分段…"
+          placeholder="写点好东西给别的用户看吧！"
           class="content-input"
         />
       </section>
@@ -109,7 +109,10 @@
         />
       </section>
 
-      <p class="notice">发布即表示你同意：内容仅用于本次实训演示，请勿填写真实的个人健康隐私。</p>
+      <div class="text-center">
+        <p class="notice">发布内容请遵循中华人民共和国相关法律法规</p>
+        <p class="notice">违者直接枪毙</p>
+      </div>
     </div>
 
     <div class="action-bar">
@@ -139,7 +142,8 @@ import { createPost, fetchMeta, getSavedAuthor, saveAuthor, uploadImage } from '
 const router = useRouter()
 
 const categories = ref(['医疗科普', '养生保健', '运动健康', '心理健康', '饮食营养'])
-const covers = ref([1, 2, 3, 4, 5, 6].map((n) => `/covers/cover-${n}.svg`))
+// 内置封面兜底清单：对应 public/covers/ 下的 svg，正常会由 /api/discover/meta 覆盖
+const covers = ref([1, 2, 3, 4, 5, 6, 7].map((n) => `/covers/cover-${n}.svg`))
 const limits = reactive({ title: 80, content: 5000, images: 9 })
 
 const form = reactive({
@@ -562,8 +566,8 @@ onMounted(() => {
 }
 
 .notice {
-  margin: 2px 6px 4px;
-  font-size: 11px;
+  margin: 0px auto 0px;
+  font-size: 12px;
   line-height: 1.7;
   color: #a3b2b7;
 }

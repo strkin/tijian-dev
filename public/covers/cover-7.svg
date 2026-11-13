@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="播放图标">
+  <rect width="400" height="300" fill="#000000"/>
+  <g transform="translate(200 150) scale(0.7) translate(-200 -150)">
+    <path d="M170 105 L170 195 Q170 205 179 200
+             L252 158 Q261 153 252 148
+             L179 100 Q170 95 170 105 Z"
+          fill="#ffffff"/>
+  </g>
+</svg>

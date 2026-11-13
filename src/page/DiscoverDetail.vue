@@ -67,7 +67,7 @@
           />
         </div>
 
-        <p class="footnote">本文由用户发布，内容仅供参考，不能替代医生诊断。</p>
+        <p class="footnote" style="text-align: center;">本文由用户发布，内容仅供参考</p>
       </div>
     </article>
 

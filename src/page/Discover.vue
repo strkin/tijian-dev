@@ -18,7 +18,7 @@
       <el-input
         v-model="keyword"
         :prefix-icon="Search"
-        placeholder="搜一搜：养生、跑步、睡眠…"
+        placeholder="搜点好康的..."
         clearable
         class="search-input"
       />
@@ -99,9 +99,9 @@
 
       <div ref="sentinel" class="sentinel">
         <el-button v-if="hasMore" text :loading="loadingMore" @click="loadMore">
-          加载更多
+          再多来点内容
         </el-button>
-        <span v-else-if="posts.length" class="end-line">— 已经到底啦 —</span>
+        <span v-else-if="posts.length" class="end-line" style="user-select: none;">— 你已抵达最深处 —</span>
       </div>
     </template>
 

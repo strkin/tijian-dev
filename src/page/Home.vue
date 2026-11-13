@@ -122,7 +122,7 @@ const doctors=[
 const navs=[
   {title:'云医院',img:'',path:'/home'},
   {title:'商城',img:'',path:'/shop'},
-  {title:'发现',img:'',path:'/discover'},
+  {title:'发现',img:'',path:'/discover91'},
   {title:'我',img:'',path:''}
 ]
 </script>
