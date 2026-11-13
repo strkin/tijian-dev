@@ -42,7 +42,7 @@
 
     <div v-if="error" class="state state-error">
       <el-icon class="state-icon"><WarningFilled /></el-icon>
-      <p class="state-title">Error:404 NotFound</p>
+      <h1 class="state-title">Error: 404 NotFound</h1>
       <p class="state-desc">{{ error }}</p>
       <el-button round type="primary" plain @click="load">重新加载</el-button>
     </div>
