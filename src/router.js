@@ -30,12 +30,15 @@ let routes = [
     { path: "/TcmConstitution", component: function () { return import('@/page/TcmConstitution.vue') } },
     { path: "/DiabetesRisk", component: function () { return import('@/page/DiabetesRisk.vue') } },
     // [发现]页面路由
-    { path: "/discover", component: function () { return import('@/page/Discover.vue') } },
-    { path: "/discover91", component: function () { return import('@/page/Discover91.vue') } },
-    { path: "/discover/publish", component: function () { return import('@/page/DiscoverPublish.vue') } },
-    { path: "/discover91/publish", component: function () { return import('@/page/DiscoverPublish91.vue') } },
-    { path: "/discover/:id", component: function () { return import('@/page/DiscoverDetail.vue') } },
-    { path: "/discover91/:id", component: function () { return import('@/page/DiscoverDetail91.vue') } }
+    { path: "/discover", component: function () { return import('@/page/Discover/Discover.vue') } },
+    { path: "/discover91", component: function () { return import('@/page/Discover/Discover91.vue') } },
+    { path: "/discoverTk", component: function () { return import('@/page/Discover/DiscoverTk.vue') } },
+    { path: "/discover/publish", component: function () { return import('@/page/Discover/DiscoverPublish.vue') } },
+    { path: "/discover91/publish", component: function () { return import('@/page/Discover/DiscoverPublish91.vue') } },
+    { path: "/discoverTk/publish", component: function () { return import('@/page/Discover/DiscoverPublishTk.vue') } },
+    { path: "/discover/:id", component: function () { return import('@/page/Discover/DiscoverDetail.vue') } },
+    { path: "/discover91/:id", component: function () { return import('@/page/Discover/DiscoverDetail91.vue') } },
+    { path: "/discoverTk/:id", component: function () { return import('@/page/Discover/DiscoverDetailTk.vue') } }
 ]
 
 export default routes
