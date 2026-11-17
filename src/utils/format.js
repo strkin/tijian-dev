@@ -1,4 +1,4 @@
-/** 把时间格式化成适合信息流的相对时间。 */
+/** 把后端返回的时间格式化成适合信息流的相对时间。 */
 export function formatTime(value) {
   if (!value) return ''
   const date = value instanceof Date ? value : new Date(value)

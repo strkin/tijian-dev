@@ -112,7 +112,7 @@ import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
 import { Search, Plus, StarFilled, WarningFilled, Reading } from '@element-plus/icons-vue'
-import { fetchMeta, fetchPosts } from '@/mock/discover'
+import { fetchMeta, fetchPosts } from '@/api/discover'
 import { formatCount, hashString } from '@/utils/format'
 
 const router = useRouter()
@@ -272,7 +272,7 @@ onMounted(async () => {
       }
     })
     .catch(() => {
-      /* 读取分类失败时保留内置分类 */
+      /* 分类接口失败时保留内置分类 */
     })
 
   observer = new IntersectionObserver(

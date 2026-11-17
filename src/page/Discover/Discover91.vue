@@ -147,7 +147,7 @@ import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
 import { Search, Plus, StarFilled, WarningFilled } from '@element-plus/icons-vue'
-import { fetchMeta, fetchPosts } from '@/mock/discover'
+import { fetchMeta, fetchPosts } from '@/api/discover'
 import { formatCount } from '@/utils/format'
 
 const router = useRouter()
@@ -289,7 +289,7 @@ onMounted(async () => {
       }
     })
     .catch(() => {
-      /* 读取分类失败时保留内置分类 */
+      /* 分类接口失败时保留内置分类 */
     })
 })
 
