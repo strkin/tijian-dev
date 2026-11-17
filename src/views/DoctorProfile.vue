@@ -160,7 +160,7 @@ const goConsult = () => router.push(`/personal/doctor/${route.params.id}/consult
 </script>
 
 <style scoped>
-.profile-page { padding-bottom: 80px; }
+.profile-page { padding-bottom: calc(80px + 8vh); }
 .top-ban { height: 56px; }
 
 .doc-header {
@@ -217,7 +217,7 @@ const goConsult = () => router.push(`/personal/doctor/${route.params.id}/consult
 .review-time { font-size: 11px; color: #BBB; margin-top: 4px; }
 
 .bottom-bar {
-  position: fixed; left: 0; bottom: 0; width: 100%; max-width: 750px;
+  position: fixed; left: 50%; bottom: 8vh; transform: translateX(-50%); width: 100%; max-width: 750px;
   padding: 10px 4%; box-sizing: border-box; background: #FFF;
   border-top: solid 1px #EEE;
 }

@@ -158,7 +158,7 @@ onMounted(load)
 .detail-page {
   min-height: 100vh;
   background: #000000;
-  padding-bottom: calc(84px + env(safe-area-inset-bottom));
+  padding-bottom: calc(84px + 8vh + env(safe-area-inset-bottom));
   box-sizing: border-box;
   color: #22343a;
 }
@@ -335,7 +335,7 @@ onMounted(load)
 .action-bar {
   position: fixed;
   left: 50%;
-  bottom: 0;
+  bottom: 8vh;
   transform: translateX(-50%);
   width: 100%;
   max-width: 750px;

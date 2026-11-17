@@ -130,7 +130,7 @@ const goUse = () => {
 </script>
 
 <style scoped>
-.detail-page { padding-bottom: 80px; }
+.detail-page { padding-bottom: calc(80px + 8vh); }
 .top-ban { height: 56px; }
 
 .banner {
@@ -200,7 +200,7 @@ const goUse = () => {
 .empty p { font-size: 13px; }
 
 .bottom-bar {
-  position: fixed; left: 0; bottom: 0; width: 100%; max-width: 750px;
+  position: fixed; left: 50%; bottom: 8vh; transform: translateX(-50%); width: 100%; max-width: 750px;
   padding: 10px 4%; box-sizing: border-box; background: #FFF;
   border-top: solid 1px #EEE;
 }
