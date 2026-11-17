@@ -1,23 +1,5 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
 import BottomNav from './components/BottomNav.vue'
-
-// 判断是不是手机（好像现在没用到，先写着）
-let isMobile = ref(window.innerWidth < 768)
-
-// 屏幕变宽变窄的时候重新判断一下
-function onResize() {
-  isMobile.value = window.innerWidth < 768
-  // console.log('现在是不是手机：', isMobile.value)
-}
-
-onMounted(function () {
-  window.addEventListener('resize', onResize)
-})
-
-onUnmounted(function () {
-  window.removeEventListener('resize', onResize)
-})
 </script>
 
 <template>
@@ -31,11 +13,37 @@ onUnmounted(function () {
 
 <style>
 /* 整个app的样式 */
+html, body, div, span, h1, h2, h3, h4, h5, h6, ul, ol, li, p {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  width: 100%;
+  min-height: 100%;
+  font-family: "微软雅黑";
+  background-color: #F7F9FA;
+}
+ul, ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+input {
+  outline: none;
+  border: none;
+}
+button {
+  cursor: pointer;
+  border: none;
+}
 #app {
+  width: 100%;
   max-width: 750px;        /* 手机App在桌面端居中显示，最大宽度750px */
+  min-height: 100vh;
   margin: 0 auto;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);  /* 可选：加个阴影区分 */
-  /* width: 100%; */
+  background-color: #F7F9FA;
 }
 .el-col {
   border-radius: 4px;
@@ -48,7 +56,12 @@ onUnmounted(function () {
 }
 /* 给各页面底部留出全局导航栏高度，避免内容被遮挡 */
 .page, .content, .chat-page {
-  padding-bottom: 10vh;
+  padding-bottom: 8vh;
+  box-sizing: border-box;
+}
+/* 个人中心的页面也要给底部导航留位置 */
+#app .personal, #app .sub-page {
+  padding-bottom: 8vh;
   box-sizing: border-box;
 }
 </style>

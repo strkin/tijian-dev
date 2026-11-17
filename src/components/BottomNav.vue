@@ -24,8 +24,8 @@ let router = useRouter()
 let navs = [
   { title: '云医院', icon: House, path: '/home' },
   { title: '商城', icon: ShoppingCart, path: '/shop' },
-  { title: '发现', icon: Search, path: '' },
-  { title: '我', icon: User, path: '' }
+  { title: '发现', icon: Search, path: '/discover' },
+  { title: '我', icon: User, path: '/personal' }
 ]
 
 // 点击导航
@@ -47,7 +47,7 @@ function go(item) {
   bottom: 0;
   width: 100%;
   max-width: 750px;
-  height: 10vh;
+  height: 8vh;
   background: #fff;
   border-top: 1px solid #eee;
   box-sizing: border-box;

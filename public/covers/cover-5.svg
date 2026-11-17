@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="心理健康封面">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6a5acd"/>
+      <stop offset="1" stop-color="#b45a9a"/>
+    </linearGradient>
+    <linearGradient id="glow5" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".25"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg5)"/>
+  <circle cx="340" cy="46" r="130" fill="url(#glow5)"/>
+  <circle cx="52" cy="270" r="92" fill="#ffffff" opacity=".06"/>
+  <g fill="#ffffff">
+    <path d="M246 92a60 60 0 1 0 62 74 48 48 0 1 1-62-74z" opacity=".94"/>
+    <circle cx="286" cy="96" r="5" opacity=".8"/>
+    <circle cx="314" cy="126" r="3.5" opacity=".6"/>
+    <circle cx="268" cy="60" r="3" opacity=".55"/>
+  </g>
+  <g fill="none" stroke="#ffffff" stroke-opacity=".9" stroke-width="6" stroke-linecap="round">
+    <path d="M96 210c0-14 12-24 28-24s28 10 28 24"/>
+    <path d="M124 186c-16 0-28-12-28-28 0-14 12-24 28-24s28 10 28 24c0 16-12 28-28 28z" opacity=".7"/>
+  </g>
+  <g fill="#ffffff" opacity=".35">
+    <circle cx="120" cy="236" r="3"/>
+    <circle cx="150" cy="244" r="2.5"/>
+  </g>
+</svg>
