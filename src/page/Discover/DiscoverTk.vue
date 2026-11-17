@@ -39,7 +39,7 @@
     </div>
 
     <div class="chips">
-      
+      <gird>
           <button
             v-for="item in categories"
             :key="item"
@@ -50,7 +50,7 @@
           >
             {{ item }}
         </button>
-      
+      </gird>
     </div>
 
     <div v-if="error" class="state state-error">

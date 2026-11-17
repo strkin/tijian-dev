@@ -24,7 +24,7 @@ let router = useRouter()
 let navs = [
   { title: '云医院', icon: House, path: '/home' },
   { title: '商城', icon: ShoppingCart, path: '/shop' },
-  { title: '发现', icon: Search, path: '/discoverTk' },
+  { title: '发现', icon: Search, path: '/discover' },
   { title: '我', icon: User, path: '/personal' }
 ]
 
