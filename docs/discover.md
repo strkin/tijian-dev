@@ -16,6 +16,8 @@
 
 前置条件：Node.js `^22.18.0 || >=24.12.0`，本机 MySQL 8（默认 `127.0.0.1:3306`）。
 
+> 新机器第一次运行、或发现页打不开，请先按 [README 的「新机器启动『发现』页」](../README.md#新机器启动发现页打不开先看这里) 逐项检查；下面是精简流程。
+
 ```bash
 # 1. 安装依赖
 npm install
@@ -126,6 +128,8 @@ npm run test:api
 
 | 现象 | 处理 |
 | --- | --- |
+| `npm error Missing script: "server"` | 本机 `package.json` 是旧版本（服务端脚本被合并覆盖），`git pull origin main` 后重试；详见 [README 新机器启动指南](../README.md#新机器启动发现页打不开先看这里) |
+| `.env` 不存在 | 新机器必须从 `.env.example` 复制并填写 `DB_PASSWORD`，该文件不入库 |
 | `ECONNREFUSED 127.0.0.1:3306` | 启动 MySQL 服务（Windows 服务名通常是 `MySQL80`） |
 | `ER_ACCESS_DENIED_ERROR` | `.env` 里的 `DB_PASSWORD` 不对，或 root 不允许该方式登录 |
 | 页面提示"连不上本地接口" | 另开终端执行 `npm run server` |
