@@ -1,5 +1,18 @@
 <script setup>
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
 import BottomNav from './components/BottomNav.vue'
+
+let route = useRoute()
+
+// 登录和注册页要占满整个屏幕，不显示底部导航
+let showBottomNav = computed(function () {
+  let path = route.path.toLowerCase()
+  if (path == '/login' || path == '/reg') {
+    return false
+  }
+  return true
+})
 </script>
 
 <template>
@@ -8,7 +21,7 @@ import BottomNav from './components/BottomNav.vue'
 
 </RouterView>
 <!-- 底部导航 -->
-<BottomNav />
+<BottomNav v-if="showBottomNav" />
 </template>
 
 <style>

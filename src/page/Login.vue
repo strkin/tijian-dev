@@ -52,8 +52,9 @@ function goLogin() {
 <style scoped>
 /* 登录页的样式 */
 .wrapper{
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
+    box-sizing: border-box;
     background-image: linear-gradient(45deg, #266C9F, #266C9F, #7EB059);
 
 }

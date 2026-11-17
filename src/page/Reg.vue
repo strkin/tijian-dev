@@ -1,4 +1,5 @@
 <template>
+<div class="wrapper">
     <div style="margin: auto;margin-bottom: 3vh;">
         <el-button type="primary" :icon="ArrowLeftBold" @click="router.back()" style="margin-right: 30vw;"/>
         注册
@@ -31,6 +32,7 @@
 </el-form-item>
 <el-button type="primary" @click="handleRegister" style="width: 92.8vw;margin: auto;margin-left: 4vw;height: 12vw;">完成</el-button>
 </el-form>
+</div>
 </template>
 <script setup>
 
@@ -63,3 +65,10 @@ function handleRegister() {
 }
 
 </script>
+<style scoped>
+.wrapper {
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: #F7F9FA;
+}
+</style>
