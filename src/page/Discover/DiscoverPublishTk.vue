@@ -137,12 +137,12 @@ import { onMounted, reactive, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
 import { ArrowLeft, Close, Plus, Select, Upload } from '@element-plus/icons-vue'
-import { createPost, fetchMeta, getSavedAuthor, saveAuthor, uploadImage } from '@/api/discover'
+import { createPost, fetchMeta, getSavedAuthor, saveAuthor, uploadImage } from '@/mock/discover'
 
 const router = useRouter()
 
 const categories = ref(['医疗科普', '养生保健', '运动健康', '心理健康', '饮食营养'])
-// 内置封面兜底清单：对应 public/covers/ 下的 svg，正常会由 /api/discover/meta 覆盖
+// 内置封面清单：对应 public/covers/ 下的 svg
 const covers = ref([1, 2, 3, 4, 5, 6, 7].map((n) => `/covers/cover-${n}.svg`))
 const limits = reactive({ title: 80, content: 5000, images: 9 })
 
@@ -265,7 +265,7 @@ async function submit() {
     })
     saveAuthor(form.author.trim())
     ElMessage.success('发布成功')
-    router.replace(`/discover/${data.post.id}`)
+    router.replace(`/discoverTk/${data.post.id}`)
   } catch (err) {
     ElMessage.error(err.message || '发布失败，请稍后再试')
   } finally {
@@ -285,7 +285,7 @@ onMounted(() => {
       }
     })
     .catch(() => {
-      /* 接口不可用时使用内置选项，表单仍可填写 */
+      /* 读取失败时使用内置选项，表单仍可填写 */
     })
 })
 </script>

@@ -86,7 +86,7 @@ import { computed, onMounted, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
 import { ArrowLeft, Compass, StarFilled, WarningFilled } from '@element-plus/icons-vue'
-import { fetchPost, toggleLike } from '@/api/discover'
+import { fetchPost, toggleLike } from '@/mock/discover'
 import { formatCount, formatDateTime, formatTime } from '@/utils/format'
 
 const route = useRoute()
