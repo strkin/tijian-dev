@@ -25,13 +25,13 @@
     </section>
 
     <div class="bottom-ban"></div>
-    <AppTabBar />
+    <!-- <AppTabBar /> -->
   </div>
 </template>
 
 <script setup>
 import { useRouter } from 'vue-router'
-import AppTabBar from '@/components/AppTabBar.vue'
+// import AppTabBar from '@/components/AppTabBar.vue'
 
 const router = useRouter()
 

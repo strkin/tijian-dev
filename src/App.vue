@@ -1,18 +1,5 @@
 <script setup>
-import { computed } from 'vue'
-import { useRoute } from 'vue-router'
 import BottomNav from './components/BottomNav.vue'
-
-let route = useRoute()
-
-// 个人中心自己有底部导航，这里就不用再显示了
-let showBottomNav = computed(function () {
-  if (route.path.indexOf('/personal') == 0) {
-    return false
-  } else {
-    return true
-  }
-})
 </script>
 
 <template>
@@ -21,7 +8,7 @@ let showBottomNav = computed(function () {
 
 </RouterView>
 <!-- 底部导航 -->
-<BottomNav v-if="showBottomNav" />
+<BottomNav />
 </template>
 
 <style>
@@ -69,6 +56,11 @@ button {
 }
 /* 给各页面底部留出全局导航栏高度，避免内容被遮挡 */
 .page, .content, .chat-page {
+  padding-bottom: 8vh;
+  box-sizing: border-box;
+}
+/* 个人中心的页面也要给底部导航留位置 */
+#app .personal, #app .sub-page {
   padding-bottom: 8vh;
   box-sizing: border-box;
 }
