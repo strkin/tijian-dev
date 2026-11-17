@@ -57,8 +57,8 @@ const list = [
   }
 ]
 
-const goProfile = (id) => router.push(`/doctor/${id}`)
-const goConsult = (id, from) => router.push({ path: `/doctor/${id}/consult`, query: { from } })
+const goProfile = (id) => router.push(`/personal/doctor/${id}`)
+const goConsult = (id, from) => router.push({ path: `/personal/doctor/${id}/consult`, query: { from } })
 </script>
 
 <style scoped>

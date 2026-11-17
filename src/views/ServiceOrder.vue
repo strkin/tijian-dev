@@ -123,7 +123,7 @@ const subtotal = computed(() => specs.find(s => s.id === selectedSpec.value).pri
 const discount = computed(() => +(subtotal.value * 0.1).toFixed(2))
 const total = computed(() => +(subtotal.value - discount.value).toFixed(2))
 
-const viewOrder = () => router.push('/service')
+const viewOrder = () => router.push('/personal/service')
 const goHome = () => router.push('/personal')
 </script>
 

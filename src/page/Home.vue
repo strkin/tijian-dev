@@ -184,7 +184,7 @@ onMounted(function () {
   overflow: hidden;
 }
 .content {
-  height: calc(100vh - 6vh - 10vh);
+  height: calc(100vh - 6vh - 8vh);
   overflow-y: auto;
 }
 .menu-item {

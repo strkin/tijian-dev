@@ -5,7 +5,7 @@
         <el-icon><ArrowLeft /></el-icon>
       </button>
       <span class="top-title">帖子详情</span>
-      <button type="button" class="icon-btn" aria-label="回发现页" @click="router.push('/discover')">
+      <button type="button" class="icon-btn" aria-label="回发现页" @click="router.push('/discoverTk')">
         <el-icon><Compass /></el-icon>
       </button>
     </header>
@@ -24,7 +24,7 @@
       <el-icon class="state-icon"><WarningFilled /></el-icon>
       <p class="state-title">这篇内容暂时看不到</p>
       <p class="state-desc">{{ error }}</p>
-      <el-button round type="primary" plain @click="router.push('/discover')">回到发现页</el-button>
+      <el-button round type="primary" plain @click="router.push('/discoverTk')">回到发现页</el-button>
     </div>
 
     <article v-else-if="post" class="article">
@@ -111,7 +111,7 @@ function goBack() {
   if (window.history.length > 1) {
     router.back()
   } else {
-    router.push('/discover')
+    router.push('/discoverTk')
   }
 }
 

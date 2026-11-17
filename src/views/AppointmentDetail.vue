@@ -50,7 +50,7 @@
     <div class="bottom-bar">
       <button v-if="!cancelled && detail.cancelable" class="btn-cancel" @click="showConfirm = true">取消预约</button>
       <button v-else-if="!cancelled" class="btn-primary" @click="router.back()">返回列表</button>
-      <button v-else class="btn-primary" @click="router.push('/appointment')">返回预约列表</button>
+      <button v-else class="btn-primary" @click="router.push('/personal/appointment')">返回预约列表</button>
     </div>
 
     <!-- 确认取消弹窗 -->

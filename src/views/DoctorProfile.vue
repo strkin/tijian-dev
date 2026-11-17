@@ -156,7 +156,7 @@ const dataMap = {
 }
 
 const doc = dataMap[route.params.id] || dataMap[1]
-const goConsult = () => router.push(`/doctor/${route.params.id}/consult`)
+const goConsult = () => router.push(`/personal/doctor/${route.params.id}/consult`)
 </script>
 
 <style scoped>

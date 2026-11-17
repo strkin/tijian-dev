@@ -122,7 +122,7 @@ const progressPercent = computed(() => Math.round(detail.usedCount / detail.tota
 
 const goUse = () => {
   if (detail.actionText === '再来一单') {
-    router.push(`/service/${route.params.id}/order`)
+    router.push(`/personal/service/${route.params.id}/order`)
   } else {
     alert('正在进入使用流程...')
   }
