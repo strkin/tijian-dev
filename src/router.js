@@ -29,28 +29,6 @@ let routes = [
     { path: "/MentalAge", component: function () { return import('@/page/MentalAge.vue') } },
     { path: "/TcmConstitution", component: function () { return import('@/page/TcmConstitution.vue') } },
     { path: "/DiabetesRisk", component: function () { return import('@/page/DiabetesRisk.vue') } },
-    // [发现]页面路由
-    { path: "/discover", component: function () { return import('@/page/Discover/Discover.vue') } },
-    { path: "/discover91", component: function () { return import('@/page/Discover/Discover91.vue') } },
-    { path: "/discoverTk", component: function () { return import('@/page/Discover/DiscoverTk.vue') } },
-    { path: "/discover/publish", component: function () { return import('@/page/Discover/DiscoverPublish.vue') } },
-    { path: "/discover91/publish", component: function () { return import('@/page/Discover/DiscoverPublish91.vue') } },
-    { path: "/discoverTk/publish", component: function () { return import('@/page/Discover/DiscoverPublishTk.vue') } },
-    { path: "/discover/:id", component: function () { return import('@/page/Discover/DiscoverDetail.vue') } },
-    { path: "/discover91/:id", component: function () { return import('@/page/Discover/DiscoverDetail91.vue') } },
-    { path: "/discoverTk/:id", component: function () { return import('@/page/Discover/DiscoverDetailTk.vue') } },
-    // 个人中心，地址都加了个/personal，免得和上面的页面撞了
-    { path: "/personal", component: function () { return import('@/views/Personal.vue') } },
-    { path: "/personal/appointment", component: function () { return import('@/views/AppointmentList.vue') } },
-    { path: "/personal/appointment/:id", component: function () { return import('@/views/AppointmentDetail.vue') } },
-    { path: "/personal/service", component: function () { return import('@/views/MyService.vue') } },
-    { path: "/personal/service/:id", component: function () { return import('@/views/ServiceDetail.vue') } },
-    { path: "/personal/service/:id/order", component: function () { return import('@/views/ServiceOrder.vue') } },
-    { path: "/personal/doctor", component: function () { return import('@/views/MyDoctor.vue') } },
-    { path: "/personal/doctor/:id", component: function () { return import('@/views/DoctorProfile.vue') } },
-    { path: "/personal/doctor/:id/consult", component: function () { return import('@/views/ConsultChat.vue') } },
-    { path: "/personal/consult", component: function () { return import('@/views/ConsultOrder.vue') } },
-    { path: "/personal/order", component: function () { return import('@/views/ShopOrder.vue') } }
 ]
 
 export default routes
