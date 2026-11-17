@@ -52,7 +52,7 @@ const list = [
   }
 ]
 
-const goDetail = (id) => router.push(`/personal/appointment/${id}`)
+const goDetail = (id) => router.push(`/appointment/${id}`)
 </script>
 
 <style scoped>

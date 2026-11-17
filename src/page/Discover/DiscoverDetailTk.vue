@@ -5,7 +5,7 @@
         <el-icon><ArrowLeft /></el-icon>
       </button>
       <span class="top-title">帖子详情</span>
-      <button type="button" class="icon-btn" aria-label="回发现页" @click="router.push('/discoverTk')">
+      <button type="button" class="icon-btn" aria-label="回发现页" @click="router.push('/discover')">
         <el-icon><Compass /></el-icon>
       </button>
     </header>
@@ -24,7 +24,7 @@
       <el-icon class="state-icon"><WarningFilled /></el-icon>
       <p class="state-title">这篇内容暂时看不到</p>
       <p class="state-desc">{{ error }}</p>
-      <el-button round type="primary" plain @click="router.push('/discoverTk')">回到发现页</el-button>
+      <el-button round type="primary" plain @click="router.push('/discover')">回到发现页</el-button>
     </div>
 
     <article v-else-if="post" class="article">
@@ -111,7 +111,7 @@ function goBack() {
   if (window.history.length > 1) {
     router.back()
   } else {
-    router.push('/discoverTk')
+    router.push('/discover')
   }
 }
 
@@ -158,7 +158,7 @@ onMounted(load)
 .detail-page {
   min-height: 100vh;
   background: #f4f7f8;
-  padding-bottom: calc(84px + 8vh + env(safe-area-inset-bottom));
+  padding-bottom: calc(84px + env(safe-area-inset-bottom));
   box-sizing: border-box;
   color: #22343a;
 }
@@ -334,7 +334,7 @@ onMounted(load)
 .action-bar {
   position: fixed;
   left: 50%;
-  bottom: 8vh;
+  bottom: 0;
   transform: translateX(-50%);
   width: 100%;
   max-width: 750px;

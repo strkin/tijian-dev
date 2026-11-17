@@ -25,24 +25,24 @@
     </section>
 
     <div class="bottom-ban"></div>
-    <!-- <AppTabBar /> -->
+    <AppTabBar />
   </div>
 </template>
 
 <script setup>
 import { useRouter } from 'vue-router'
-// import AppTabBar from '@/components/AppTabBar.vue'
+import AppTabBar from '@/components/AppTabBar.vue'
 
 const router = useRouter()
 
 const user = { name: '黄药师', phone: '13523651693' }
 
 const menus = [
-  { path: '/personal/appointment', icon: 'fa-user-plus', label: '我的预约' },
-  { path: '/personal/service',     icon: 'fa-volume-control-phone', label: '我的服务' },
-  { path: '/personal/doctor',      icon: 'fa-bed', label: '我的医生' },
-  { path: '/personal/consult',     icon: 'fa-sticky-note', label: '问诊订单' },
-  { path: '/personal/order',        icon: 'fa-cart-plus', label: '商城订单' },
+  { path: '/appointment', icon: 'fa-user-plus', label: '我的预约' },
+  { path: '/service',     icon: 'fa-volume-control-phone', label: '我的服务' },
+  { path: '/doctor',      icon: 'fa-bed', label: '我的医生' },
+  { path: '/consult',     icon: 'fa-sticky-note', label: '问诊订单' },
+  { path: '/shop',        icon: 'fa-cart-plus', label: '商城订单' },
   { path: '/login?out=1', icon: 'fa-sign-out', label: '退出登录' }
 ]
 

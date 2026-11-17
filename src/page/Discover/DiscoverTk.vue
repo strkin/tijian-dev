@@ -39,7 +39,7 @@
     </div>
 
     <div class="chips">
-      
+      <grid>
           <button
             v-for="item in categories"
             :key="item"
@@ -50,7 +50,7 @@
           >
             {{ item }}
         </button>
-      
+      </grid>
     </div>
 
     <div v-if="error" class="state state-error">
@@ -265,11 +265,11 @@ function handleSearch() {
 }
 
 function goPublish() {
-  router.push('/discoverTk/publish')
+  router.push('/discover/publish')
 }
 
 function openPost(id) {
-  router.push(`/discoverTk/${id}`)
+  router.push(`/discover/${id}`)
 }
 
 function onResize() {
@@ -287,7 +287,7 @@ function goBack() {
   if (window.history.length > 1) {
     router.back()
   } else {
-    router.push('/discoverTk')
+    router.push('/discover')
   }
 }
 

@@ -123,12 +123,12 @@ const subtotal = computed(() => specs.find(s => s.id === selectedSpec.value).pri
 const discount = computed(() => +(subtotal.value * 0.1).toFixed(2))
 const total = computed(() => +(subtotal.value - discount.value).toFixed(2))
 
-const viewOrder = () => router.push('/personal/service')
+const viewOrder = () => router.push('/service')
 const goHome = () => router.push('/personal')
 </script>
 
 <style scoped>
-.order-page { padding-bottom: calc(80px + 8vh); }
+.order-page { padding-bottom: 80px; }
 .top-ban { height: 56px; }
 
 .goods-card {
@@ -191,7 +191,7 @@ const goHome = () => router.push('/personal')
 .pay-item .check { margin-left: auto; color: #02A6C9; }
 
 .bottom-bar {
-  position: fixed; left: 50%; bottom: 8vh; transform: translateX(-50%); width: 100%; max-width: 750px;
+  position: fixed; left: 0; bottom: 0; width: 100%; max-width: 750px;
   padding: 10px 4%; box-sizing: border-box; background: #FFF;
   border-top: solid 1px #EEE;
   display: flex; align-items: center; justify-content: space-between;

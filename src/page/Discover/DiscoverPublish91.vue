@@ -166,7 +166,7 @@ function goBack() {
   if (window.history.length > 1) {
     router.back()
   } else {
-    router.push('/discover91')
+    router.push('/discover')
   }
 }
 
@@ -295,7 +295,7 @@ onMounted(() => {
 .publish-page {
   min-height: 100vh;
   background: #000000;
-  padding-bottom: calc(88px + 8vh + env(safe-area-inset-bottom));
+  padding-bottom: calc(88px + env(safe-area-inset-bottom));
   box-sizing: border-box;
   color: #22343a;
 }
@@ -594,7 +594,7 @@ onMounted(() => {
 .action-bar {
   position: fixed;
   left: 50%;
-  bottom: 8vh;
+  bottom: 0;
   transform: translateX(-50%);
   width: 100%;
   max-width: 750px;

@@ -135,7 +135,7 @@ const removeItem = (item) => {
 }
 
 const goChat = (item) => {
-  router.push(`/personal/doctor/${item.doctorId}/consult`)
+  router.push(`/doctor/${item.doctorId}/consult`)
 }
 </script>
 
