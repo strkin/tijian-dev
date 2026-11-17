@@ -260,56 +260,6 @@
 
   </el-drawer>
 
-  <!-- 底部导航 -->
-  <div
-    class="bottom"
-    style="
-      height: 10vh;
-      width: 100vw;
-      text-align: center;
-      background-color: #127A90;
-      position: fixed;
-      bottom: 0;
-      box-sizing: border-box;
-    "
-  >
-
-    <el-row
-      :gutter="10"
-      style="
-        padding: 10px;
-        width: 100%;
-        box-sizing: border-box;
-      "
-    >
-
-      <el-col
-        :xs="6"
-        :sm="8"
-        :md="8"
-        :lg="8"
-        :xl="8"
-        v-for="(item,index) in navs"
-        :key="index"
-        @click="item.path && router.push(item.path)"
-      >
-
-        <div
-          class="nav-item"
-          style="height: 10vh;"
-        >
-
-          <img :src="item.img">
-
-          {{ item.title }}
-
-        </div>
-
-      </el-col>
-
-    </el-row>
-
-  </div>
 
 </div>
 </template>
@@ -317,10 +267,9 @@
 <script setup>
 
 import { ref, computed } from 'vue'
-import { useRouter } from 'vue-router'
+
 import { ElMessage } from 'element-plus'
 
-const router = useRouter()
 
 // 搜索内容
 const search = ref('')
@@ -593,33 +542,6 @@ const resetGoods = () => {
 }
 
 // 底部导航
-const navs = [
-
-  {
-    title: '云医院',
-    img: '',
-    path: '/home'
-  },
-
-  {
-    title: '商城',
-    img: '',
-    path: '/shop'
-  },
-
-  {
-    title: '发现',
-    img: '',
-    path: '/discover'
-  },
-
-  {
-    title: '我',
-    img: '',
-    path: ''
-  }
-
-]
 
 </script>
 

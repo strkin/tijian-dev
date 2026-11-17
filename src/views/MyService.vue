@@ -45,12 +45,12 @@ const list = [
   }
 ]
 
-const goDetail = (id) => router.push(`/service/${id}`)
+const goDetail = (id) => router.push(`/personal/service/${id}`)
 const goAction = (item) => {
   if (item.actionBtn === '再来一单') {
-    router.push(`/service/${item.id}/order`)
+    router.push(`/personal/service/${item.id}/order`)
   } else {
-    router.push(`/service/${item.id}`)
+    router.push(`/personal/service/${item.id}`)
   }
 }
 </script>

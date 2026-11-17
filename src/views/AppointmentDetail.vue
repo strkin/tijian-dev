@@ -50,7 +50,7 @@
     <div class="bottom-bar">
       <button v-if="!cancelled && detail.cancelable" class="btn-cancel" @click="showConfirm = true">取消预约</button>
       <button v-else-if="!cancelled" class="btn-primary" @click="router.back()">返回列表</button>
-      <button v-else class="btn-primary" @click="router.push('/appointment')">返回预约列表</button>
+      <button v-else class="btn-primary" @click="router.push('/personal/appointment')">返回预约列表</button>
     </div>
 
     <!-- 确认取消弹窗 -->
@@ -131,7 +131,7 @@ const confirmCancel = () => {
 </script>
 
 <style scoped>
-.detail-page { padding-bottom: 80px; }
+.detail-page { padding-bottom: calc(80px + 8vh); }
 .top-ban { height: 56px; }
 
 .success-tip {
@@ -177,7 +177,7 @@ const confirmCancel = () => {
 }
 
 .bottom-bar {
-  position: fixed; left: 0; bottom: 0; width: 100%; max-width: 750px;
+  position: fixed; left: 50%; bottom: 8vh; transform: translateX(-50%); width: 100%; max-width: 750px;
   padding: 10px 4%; box-sizing: border-box; background: #FFF;
   border-top: solid 1px #EEE; display: flex; gap: 12px;
 }
