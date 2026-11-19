@@ -109,7 +109,7 @@
         />
       </section>
 
-      <div class="text-center">
+      <div style="text-align: center;">
         <p class="notice">发布内容请遵循中华人民共和国相关法律法规</p>
         <p class="notice">违者直接枪毙</p>
       </div>
@@ -294,7 +294,7 @@ onMounted(() => {
 .publish-page {
   min-height: 100vh;
   background: #f4f7f8;
-  padding-bottom: calc(88px + env(safe-area-inset-bottom));
+  padding-bottom: calc(88px + 8vh + env(safe-area-inset-bottom));
   box-sizing: border-box;
   color: #22343a;
 }
@@ -575,7 +575,7 @@ onMounted(() => {
 .action-bar {
   position: fixed;
   left: 50%;
-  bottom: 0;
+  bottom: 8vh;
   transform: translateX(-50%);
   width: 100%;
   max-width: 750px;
