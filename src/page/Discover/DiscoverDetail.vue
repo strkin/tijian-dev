@@ -20,6 +20,7 @@
       </div>
     </div>
 
+    <!-- 1.帖子加载失败时 显示此页面 -->
     <div v-else-if="error" class="state">
       <el-icon class="state-icon"><WarningFilled /></el-icon>
       <p class="state-title">这篇内容暂时看不到</p>
@@ -27,12 +28,14 @@
       <el-button round type="primary" plain @click="router.push('/discover')">回到发现页</el-button>
     </div>
 
+    <!-- 2.帖子加载成功 显示此界面 -->
     <article v-else-if="post" class="article">
       <div class="hero">
         <img :src="post.cover" :alt="post.title" />
       </div>
 
       <div class="sheet">
+        <!-- 分类标签 发布时间 -->
         <div class="tag-row">
           <span class="tag">{{ post.category }}</span>
           <span class="time">{{ formatTime(post.createdAt) }}</span>
@@ -41,6 +44,7 @@
         <h1 class="title">{{ post.title }}</h1>
 
         <div class="author-row">
+          <!-- 头像 作者信息 发布日期 -->
           <span class="avatar">{{ initial(post.author) }}</span>
           <div class="author-info">
             <span class="author-name">{{ post.author }}</span>
@@ -50,10 +54,12 @@
 
         <div class="divider" />
 
+        <!-- 正文内容 -->
         <div class="content">
           <p v-for="(paragraph, index) in paragraphs" :key="index">{{ paragraph }}</p>
         </div>
 
+        <!-- 正文配图 -->
         <div v-if="post.images && post.images.length" class="image-grid">
           <el-image
             v-for="(url, index) in post.images"
@@ -158,7 +164,7 @@ onMounted(load)
 .detail-page {
   min-height: 100vh;
   background: #f4f7f8;
-  padding-bottom: calc(84px + env(safe-area-inset-bottom));
+  padding-bottom: calc(84px + 8vh + env(safe-area-inset-bottom));
   box-sizing: border-box;
   color: #22343a;
 }
@@ -334,7 +340,7 @@ onMounted(load)
 .action-bar {
   position: fixed;
   left: 50%;
-  bottom: 0;
+  bottom: 8vh;
   transform: translateX(-50%);
   width: 100%;
   max-width: 750px;
