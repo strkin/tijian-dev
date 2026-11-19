@@ -14,6 +14,7 @@
       </button>
     </header>
 
+    <!-- 搜索框 -->
     <div class="search-wrap">
       <el-input
         v-model="keyword"
@@ -24,6 +25,7 @@
       />
     </div>
 
+    <!-- 话题分类选择 -->
     <div class="chips">
       <button
         v-for="item in categories"
@@ -37,6 +39,7 @@
       </button>
     </div>
 
+    <!-- 内容加载失败 显示此界面 -->
     <div v-if="error" class="state state-error">
       <el-icon class="state-icon"><WarningFilled /></el-icon>
       <p class="state-title">内容没能加载出来</p>
@@ -45,6 +48,7 @@
     </div>
 
     <template v-else>
+      <!-- 1.加载中 -->
       <div v-if="loading" class="feed">
         <div v-for="col in 2" :key="col" class="column">
           <div v-for="i in 2" :key="i" class="card skeleton-card">
@@ -56,9 +60,10 @@
           </div>
         </div>
       </div>
-
+      <!-- 2.加载完成 显示结果 -->
       <div v-else-if="posts.length" class="feed">
         <div v-for="(column, index) in columns" :key="index" class="column">
+          <!-- 卡片模板 -->
           <article
             v-for="post in column"
             :key="post.id"
@@ -87,7 +92,7 @@
           </article>
         </div>
       </div>
-
+      <!-- 3.加载完成 没有内容 -->
       <div v-else class="state">
         <el-icon class="state-icon"><Reading /></el-icon>
         <p class="state-title">{{ keyword ? '没有找到相关内容' : '还没有人发布内容' }}</p>

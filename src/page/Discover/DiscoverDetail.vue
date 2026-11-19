@@ -10,6 +10,7 @@
       </button>
     </header>
 
+    <!-- 1.帖子加载中 显示此页面 -->
     <div v-if="loading" class="loading-wrap">
       <div class="skeleton-cover" />
       <div class="skeleton-body">
@@ -20,7 +21,7 @@
       </div>
     </div>
 
-    <!-- 1.帖子加载失败时 显示此页面 -->
+    <!-- 2.帖子加载失败时 显示此页面 -->
     <div v-else-if="error" class="state">
       <el-icon class="state-icon"><WarningFilled /></el-icon>
       <p class="state-title">这篇内容暂时看不到</p>
@@ -28,7 +29,7 @@
       <el-button round type="primary" plain @click="router.push('/discover')">回到发现页</el-button>
     </div>
 
-    <!-- 2.帖子加载成功 显示此界面 -->
+    <!-- 3.帖子加载成功 显示此界面 -->
     <article v-else-if="post" class="article">
       <div class="hero">
         <img :src="post.cover" :alt="post.title" />
@@ -77,6 +78,7 @@
       </div>
     </article>
 
+    <!-- 点赞按钮 -->
     <div v-if="post" class="action-bar">
       <button type="button" class="like-btn" :class="{ liked: post.liked }" :disabled="liking" @click="onLike">
         <el-icon><StarFilled /></el-icon>

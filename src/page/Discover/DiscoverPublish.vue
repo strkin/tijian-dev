@@ -8,6 +8,7 @@
       <span class="top-placeholder" />
     </header>
 
+    <!-- 话题选择 -->
     <div class="form">
       <section class="block">
         <h2 class="block-title">选择话题分类</h2>
@@ -25,6 +26,7 @@
         </div>
       </section>
 
+      <!-- 标题填写 -->
       <section class="block">
         <h2 class="block-title">标题</h2>
         <el-input
@@ -36,6 +38,7 @@
         />
       </section>
 
+      <!-- 正文填写 -->
       <section class="block">
         <h2 class="block-title">正文</h2>
         <el-input
@@ -50,6 +53,7 @@
         />
       </section>
 
+      <!-- 封面选择 -->
       <section class="block">
         <h2 class="block-title">封面图</h2>
         <div class="cover-preview">
@@ -77,6 +81,7 @@
         <p class="hint">也可以从上面选一张内置封面</p>
       </section>
 
+      <!-- 正文配图选择 -->
       <section class="block">
         <h2 class="block-title">正文配图 <span class="block-sub">最多 {{ limits.images }} 张</span></h2>
         <div class="image-grid">
@@ -99,6 +104,7 @@
         </div>
       </section>
 
+      <!-- 昵称填写 -->
       <section class="block">
         <h2 class="block-title">昵称 <span class="block-sub">选填</span></h2>
         <el-input
@@ -115,6 +121,7 @@
       </div>
     </div>
 
+    <!-- 发布按钮 -->
     <div class="action-bar">
       <el-button
         type="primary"
